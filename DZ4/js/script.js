@@ -88,5 +88,3 @@ var mainList = {
 };
 
 console.log(mainList);
-
-
