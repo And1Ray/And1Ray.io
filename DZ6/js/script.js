@@ -8,19 +8,18 @@ let nameValue = document.getElementsByClassName('name-value')[0],
     timeValue = document.querySelector('.time-value'),
     isOpen = document.querySelector('.isopen'),
 
-    goodsItem = document.getElementsByClassName('goods-item'),
+    goodsItem = document.querySelectorAll('.goods-item'),
     btn = document.getElementsByTagName('button'),
     chooseItem = document.querySelector('.choose-item'),
     timeItem = document.querySelector('.time-item'),
     countBudget = document.querySelector('.count-budget-value'),
-    discountBudget = document.querySelector('.discount-budget-value'),
     hireEmployersItem = document.querySelectorAll('.hire-employers-item');
 
 
-var money;
+var money, price = 300;
 
 btn[0].addEventListener('click', () => {
-
+  
   let money = +prompt('Ваш бюджет на месяц?', '');
   while (isNaN(money) || money === '' || money === null) {
     money = +prompt('Ваш бюджет на месяц?', '');
@@ -29,9 +28,29 @@ btn[0].addEventListener('click', () => {
   budgetValue.textContent = money;
   nameValue.textContent = prompt('Название вашего магазина?', '').toUpperCase();
   mainList.nameShop = nameValue.textContent;
+
+  btn[1].removeAttribute('disabled', '');
+  btn[3].removeAttribute('disabled', '');
+
+  for (var i = 0; i < 4; i++) {
+    goodsItem[i].addEventListener('change', () => {
+     btn[2].removeAttribute('disabled', '');
+   });
+  }
+
+  for (var i = 0; i < 3; i++) {
+    hireEmployersItem[i].addEventListener('change', () => {
+     btn[4].removeAttribute('disabled', '');
+   });
+  }
+
 });
 
-btn[1].addEventListener('click', () => {
+for (var i = 1; i < btn.length; i++) {
+  btn[i].setAttribute('disabled', '');
+}
+
+btn[2].addEventListener('click', () => {
   for (let i = 0; i < goodsItem.length; i++) {
     let a = goodsItem[i].value;
     if ((typeof(a)) === 'string' && (typeof(a)) !== null && a.length < 50) {
@@ -81,11 +100,13 @@ timeValue.addEventListener('change', () => {
     }
 });
 
-btn[2].addEventListener('click', () => {
-  countBudget.value = mainList.budget / 30; 
+btn[1].addEventListener('click', () => {
+  discountValue.style.backgroundColor = 'green';
+  discountValue.textContent = price * 0.8; 
+  mainList.discount = true;
 });
 
-btn[3].addEventListener('click', () => {
+btn[4].addEventListener('click', () => {
   for (let i = 0; i < hireEmployersItem.length; i++) {
     let name = hireEmployersItem[i].value;
     mainList.employers[i] = name;
@@ -94,9 +115,11 @@ btn[3].addEventListener('click', () => {
   }
 });
 
-btn[4].addEventListener('change', () => {
-  
+btn[3].addEventListener('click', () => {
+  countBudget.value = mainList.budget / 30; 
 });
+
+countBudget.setAttribute('disabled', '');
 
 let mainList = {
   budget: money,
