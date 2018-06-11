@@ -1,0 +1,11 @@
+body {
+	margin: 0, auto;
+}
+
+.time {
+ padding: 20px;
+ background-color: black;
+ color: white;
+ font-size: 100px;
+ text-align: center;
+}
