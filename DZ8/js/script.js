@@ -40,7 +40,7 @@ window.addEventListener('DOMContentLoaded', function () {
 	let deadline = '2018-06-13';
 
 	function getTimeRemaining (endtime) {
-		let t = Date.parse(endtime) - Date.parse(new Date()),
+		let t = Date.parse(endtime) - Date.parse(new Date()) - 10800000,
 		seconds = Math.floor( (t/1000) % 60 ),
 		minutes = Math.floor( (t/1000/60) % 60),
 		hours = Math.floor( (t/(1000*60*60)) );
@@ -70,20 +70,20 @@ window.addEventListener('DOMContentLoaded', function () {
 
 					let timeInterval = setInterval(updateClock, 1000);
 
+
 					if (t.total <= 0) {
 						clearInterval(timeInterval);
 						hours.innerHTML = '00';
 						minutes.innerHTML = '00';
 						seconds.innerHTML = '00';
-					}
+						}
 				};
 				updateClock();
 				
 	};
-
 	setClock('timer', deadline);
 
-	let aboutUs = document.getElementsByTagName('a')[0],
+/*	let aboutUs = document.getElementsByTagName('a')[0],
 			photo = document.getElementsByTagName('a')[1],
 			price = document.getElementsByTagName('a')[2],
 		  contacts = document.getElementsByTagName('a')[3];
@@ -91,5 +91,5 @@ window.addEventListener('DOMContentLoaded', function () {
 	aboutUs.addEventListener('click', (event) => {
 		event.preventDefault();
 	});
-
+*/
 });
