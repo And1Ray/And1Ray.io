@@ -184,8 +184,8 @@ window.addEventListener('DOMContentLoaded', function () {
 				}
 			}
 		}
-		for (var i = 0; i < input.length; i++) {
-			input[i].value = '';
+		for (var i = 0; i < inputFoot.length; i++) {
+			inputFoot[i].value = '';
 			//Очищаем поля ввода
 		}
 	});
