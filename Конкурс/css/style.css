@@ -1,0 +1,264 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+body {
+  height: 670px;
+  background: url(../img/lampochki-visiat-provod-provoda-tsokol.jpg) center no-repeat;
+  background-size: cover;
+  word-break: break-all;
+}
+.open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #000;
+  -webkit-box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+          box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+  width: 170px;
+  height: 170px;
+  margin: 0 auto;
+  margin-top: 80px;
+  margin-left: 22%;
+  border-radius: 100px;
+}
+.open:before {
+  content: "";
+  display: block;
+  position: absolute;
+  -webkit-box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+          box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+  width: 8px;
+  height: 90px;
+  background-color: #000;
+  margin: 0 auto;
+  -webkit-transform: translateY(-130px);
+          transform: translateY(-130px);
+}
+.open-btn {
+  border: none;
+  outline: none;
+  color: #fff;
+  font-weight: 900;
+  cursor: pointer;
+  background-color: #5356ad;
+  -webkit-box-shadow: 0px 0px 10px rgba(83, 86, 173, 0.5);
+          box-shadow: 0px 0px 10px rgba(83, 86, 173, 0.5);
+  border-radius: 8px;
+  border: 1px solid #fff;
+  width: 150px;
+  height: 50px;
+}
+.main {
+  width: 100%;
+  margin-top: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.main-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  width: 550px;
+  padding: 28px;
+  color: #fff;
+}
+.main-info .name,
+.main-info .name-value,
+.main-info .budget,
+.main-info .budget-value,
+.main-info .goods,
+.main-info .goods-value,
+.main-info .items,
+.main-info .items-value,
+.main-info .employers,
+.main-info .employers-value,
+.main-info .discount-value,
+.main-info .isopen,
+.main-info .isopen-value {
+  width: 48%;
+  margin-top: 10px;
+  min-height: 40px;
+  padding: 10px;
+  -webkit-box-shadow: 0px 0px 3px 2px #ffa900;
+  box-shadow: 0px 0px 3px 2px #ffa900;
+  border-radius: 8px;
+}
+.main-info .discount {
+  width: 48%;
+  margin-top: 10px;
+  min-height: 40px;
+  padding: 10px;
+}
+.main-info .discount-budget-btn {
+  display: block;
+  margin: 0 auto;
+  outline: none;
+  color: #fff;
+  font-weight: 900;
+  cursor: pointer;
+  background-color: #5356ad;
+  -webkit-box-shadow: 0px 0px 10px rgba(83, 86, 173, 0.5);
+          box-shadow: 0px 0px 10px rgba(83, 86, 173, 0.5);
+  border-radius: 8px;
+}
+.main-functions {
+  width: 40%;
+  min-height: 300px;
+  padding: 20px;
+  border: none;
+}
+.main-functions .choose-goods,
+.main-functions .choose-items {
+  margin-top: 5px;
+  text-align: left;
+  font-size: 20px;
+  color: white;
+}
+.main-functions .time,
+.main-functions .count-budget,
+.main-functions .hire-employers {
+  margin-top: 5px;
+  text-align: right;
+  font-size: 20px;
+  color: white;
+}
+.main-functions .goods-item {
+  display: inline-block;
+  margin-left: 0;
+  margin-top: 10px;
+  padding-left: 10px;
+  width: 49%;
+  height: 25px;
+  color: #fff;
+  background-color: #161616;
+  -webkit-box-shadow: 0px 0px 3px 2px #057d9f;
+  box-shadow: 0px 0px 3px 2px #057d9f;
+  border-radius: 8px;
+  border: none;
+}
+.main-functions .goods-item-btn {
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+  outline: none;
+  color: #fff;
+  font-weight: 900;
+  cursor: pointer;
+  background-color: #5356ad;
+  -webkit-box-shadow: 0px 0px 10px rgba(83, 86, 173, 0.5);
+          box-shadow: 0px 0px 10px rgba(83, 86, 173, 0.5);
+  border-radius: 8px;
+}
+.main-functions .choose-item,
+.main-functions .time-value,
+.main-functions .count-budget-value {
+  display: block;
+  margin-left: 0;
+  margin-top: 10px;
+  padding-left: 10px;
+  width: 70%;
+  height: 25px;
+  background-color: #161616;
+  -webkit-box-shadow: 0px 0px 3px 2px #46e3d6;
+  box-shadow: 0px 0px 3px 2px #46e3d6;
+  border-radius: 8px;
+  border: none;
+  color: white;
+}
+.main-functions .time-value {
+  width: 30%;
+  color: white;
+  -webkit-box-shadow: 0px 0px 3px 2px #ba80ba;
+  box-shadow: 0px 0px 3px 2px #ba80ba;
+}
+.main-functions .count-budget-value {
+  width: 30%;
+  display: inline-block;
+  margin-left: 25%;
+  -webkit-box-shadow: 0px 0px 3px 2px #ff3100;
+  box-shadow: 0px 0px 3px 2px #ff3100;
+  border-radius: 8px;
+  border: none;
+  color: white;
+}
+.main-functions .count-budget-btn {
+  margin-top: 10px;
+  outline: none;
+  color: #fff;
+  font-weight: 900;
+  cursor: pointer;
+  background-color: #5356ad;
+  -webkit-box-shadow: 0px 0px 10px rgba(83, 86, 173, 0.5);
+          box-shadow: 0px 0px 10px rgba(83, 86, 173, 0.5);
+  border-radius: 8px;
+}
+.main-functions .hire-employers-item {
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding-left: 10px;
+  width: 49%;
+  height: 25px;
+  background-color: #161616;
+  -webkit-box-shadow: 0px 0px 3px 2px #41db00;
+  box-shadow: 0px 0px 3px 2px #41db00;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  margin-right: 0;
+}
+.main-functions .hire-employers-btn {
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+  outline: none;
+  color: #fff;
+  font-weight: 900;
+  cursor: pointer;
+  background-color: #5356ad;
+  -webkit-box-shadow: 0px 0px 10px rgba(83, 86, 173, 0.5);
+          box-shadow: 0px 0px 10px rgba(83, 86, 173, 0.5);
+  border-radius: 8px;
+  margin-right: 0;
+}
+.functions {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-align-items: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
