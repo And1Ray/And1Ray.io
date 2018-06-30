@@ -30,10 +30,10 @@ window.addEventListener('DOMContentLoaded', function () {
 	modalWindowOpenClose (closeButton, 'none', modalPopup);
 
 
-
-
-
-
+	function sixtySeconds(modal) {
+  	modalPopup.style.display = 'flex';
+	}
+	setTimeout(sixtySeconds, 60000);
 
 
 
