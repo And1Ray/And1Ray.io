@@ -11,6 +11,12 @@ body {
   font-style: normal;
   color: #000000;
 }
+.hide {
+  display: none;
+}
+.show {
+  display: inline-block;
+}
 a:hover {
   text-decoration: none;
 }
@@ -416,7 +422,7 @@ textarea:focus {
   color: #454545;
 }
 /*test*/
-/*.tabs li {
+/* .tabs li {
 	display: inline-block;
 }
 .tabs .glazing_block.active  a {
@@ -425,7 +431,7 @@ textarea:focus {
 }
 .tabs_divs .noactive {
 	display: none;
-}*/
+} */
 /*/test*/
 /*Decoration*/
 .decoration {
