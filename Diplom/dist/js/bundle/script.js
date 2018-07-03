@@ -80,8 +80,6 @@ window.addEventListener('DOMContentLoaded', function () {
 	    modalCalcEnd = document.getElementsByClassName('popup_calc_end')[0],
 	    closeCalc = document.getElementsByClassName('popup_calc_close');
 
-	console.log(popupCalcBtn);
-
 	function addCalc() {
 		for (var i = 0; i < calcBtn.length; i++) {
 			calcBtn[i].addEventListener('click', function () {
@@ -98,6 +96,7 @@ window.addEventListener('DOMContentLoaded', function () {
 		btn.addEventListener('click', function () {
 			modal.style.display = 'flex';
 			modalprev.style.display = 'none';
+			console.log(info);
 		});
 		for (var i = 0; i < closeCalc.length; i++) {
 			closeCalc[i].addEventListener('click', function () {
@@ -109,8 +108,100 @@ window.addEventListener('DOMContentLoaded', function () {
 	calcMod(popupCalcBtn, modalCalcProfile, modalCalc);
 	calcMod(popupCalcProfileBtn, modalCalcEnd, modalCalcProfile);
 
-	//CalcPopupModal
+	//CalcPicture
 
 	var iconsMini = document.getElementsByClassName('mini_img'),
-	    iconsBig = document.getElementsByClassName('big_png');
+	    iconsBig = document.getElementsByClassName('big_png'),
+	    formWindow = void 0;
+
+	function icons(icon, icBig) {
+		var _loop2 = function _loop2(_i2) {
+			icon[_i2].addEventListener('click', function (e) {
+				e.preventDefault();
+				info.form = e.target;
+				for (var _j2 = 0; _j2 < icon.length; _j2++) {
+					if (_j2 == _i2) {
+						icon[_j2].style.width = '114px';
+						icon[_j2].style.height = '67px';
+						icBig[_j2].style.display = 'inline-block';
+					} else {
+						icon[_j2].style.width = '94px';
+						icon[_j2].style.height = '47px';
+						icBig[_j2].style.display = 'none';
+					}
+				}
+			});
+		};
+
+		for (var _i2 = 0; _i2 < icon.length; _i2++) {
+			_loop2(_i2);
+		}
+	}
+	icons(iconsMini, iconsBig);
+
+	//calcWiHe
+
+	var width = document.getElementById('width'),
+	    height = document.getElementById('height');
+
+	function check(elem) {
+		elem.addEventListener('keyup', function () {
+			this.value = this.value.replace(/[^\d]/, '').substr(0, 6);
+		});
+	}
+	check(width);
+	check(height);
+	width.addEventListener('change', function () {
+		info.widthInfo = width.value;
+	});
+	height.addEventListener('change', function () {
+		info.heightInfo = height.value;
+	});
+
+	//calcCheckBox
+
+	var checkBox = document.querySelectorAll('.checkbox');
+
+	checkBox[0].addEventListener('click', function (e) {
+		info.temp = 'cold';
+		checkBox[1].checked = false;
+	});
+	checkBox[1].addEventListener('click', function (e) {
+		info.temp = 'warm';
+		checkBox[0].checked = false;
+	});
+
+	var select = document.getElementById('view_type');
+
+	select.addEventListener('change', function () {
+		info.typeInfo = select.value;
+	});
+
+	//ObjCalc
+	var a = void 0,
+	    b = void 0,
+	    c = void 0,
+	    d = void 0,
+	    e = void 0;
+	var info = {
+		form: e,
+		widthInfo: a,
+		heightInfo: b,
+		typeInfo: c,
+		temp: d
+
+		//Calc -->
+
+
+		//Forms
+
+
+		//Timer
+
+
+		//ClickPicture
+
+	};var clickImg = document.getElementsByClassName('zoom');
+
+	console.log(clickImg);
 });

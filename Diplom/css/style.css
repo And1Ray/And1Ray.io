@@ -700,7 +700,7 @@ textarea:focus {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  width: 40rem;
+  width: 42rem;
   background-color: #ffffff;
 }
 .popup_close,
@@ -730,7 +730,7 @@ textarea:focus {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  width: 40rem;
+  width: 42rem;
   padding: 1rem 0.5rem 4rem;
   background-color: #ffffff;
 }
@@ -800,7 +800,7 @@ textarea:focus {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  width: 40rem;
+  width: 42rem;
   padding: 1rem 5rem 4rem;
   background-color: #ffffff;
   /*	label {
