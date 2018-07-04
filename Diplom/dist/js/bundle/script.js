@@ -322,5 +322,36 @@ window.addEventListener('DOMContentLoaded', function () {
 
 	//ClickPicture
 
-	var clickImg = document.getElementsByClassName('zoom');
+	var divPicture = document.createElement('div'),
+	    imgPicture = document.createElement('img'),
+	    zoom = document.getElementsByClassName('zoom'),
+	    zoomPic = document.querySelectorAll('.zoom > a'),
+	    ourWorks = document.querySelector('.works');
+
+	divPicture.classList.add('div_picture');
+	imgPicture.classList.add('div_picture_img');
+
+	var _loop3 = function _loop3(_i9) {
+		zoom[_i9].addEventListener('click', function (event) {
+			event.preventDefault();
+			divPicture.style.display = 'flex';
+			ourWorks.appendChild(divPicture);
+			divPicture.appendChild(imgPicture);
+			for (var _i10 = 0; _i10 < zoomPic.length; _i10++) {
+				zoomPic[_i10].getAttribute('href');
+			}
+			imgPicture.setAttribute('src', zoomPic[_i9].href);
+		});
+	};
+
+	for (var _i9 = 0; _i9 < zoom.length; _i9++) {
+		_loop3(_i9);
+	}
+
+	divPicture.addEventListener('click', function (event) {
+		var target = event.target;
+		if (target == divPicture) {
+			divPicture.style.display = 'none';
+		}
+	});
 });
