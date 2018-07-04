@@ -249,7 +249,6 @@ window.addEventListener('DOMContentLoaded', function () {
 
 	for (let i = 0; i < form.length; i++) {
 		sendForm(form[i]);
-		console.log(sendForm(form[i]));
 		clearInput();
 	}
 
