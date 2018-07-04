@@ -117,16 +117,16 @@ window.addEventListener('DOMContentLoaded', function () {
 	//Form
 
 	let message = new Object();
-	message.loading = 'Загрузка...';
-	message.success = 'Спасибо! Скоро мы с вами свяжемся.';
-	message.failure = 'Что то пошло не так...';
+					message.loading = 'Загрузка...';
+					message.success = 'Спасибо! Скоро мы с вами свяжемся.';
+					message.failure = 'Что то пошло не так...';
 
 	let form = document.getElementsByClassName('main-form')[0],
-			footerForm = document.getElementById('form'),
-			input = form.getElementsByTagName('input'),
-			inputFoot = footerForm.getElementsByTagName('input'),
-			statusMessage = document.createElement('div');
-			statusMessage.classList.add('status');
+					footerForm = document.getElementById('form'),
+					input = form.getElementsByTagName('input'),
+					inputFoot = footerForm.getElementsByTagName('input'),
+					statusMessage = document.createElement('div');
+					statusMessage.classList.add('status');
 
 	form.addEventListener('submit', function (event) {
 		event.preventDefault();

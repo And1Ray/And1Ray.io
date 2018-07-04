@@ -17,6 +17,10 @@ body {
 .show {
   display: inline-block;
 }
+.status {
+  color: black;
+  font-size: 20px;
+}
 a:hover {
   text-decoration: none;
 }
@@ -682,7 +686,8 @@ textarea:focus {
 /*Modals*/
 .popup,
 .popup_engineer,
-.popup_calc_end {
+.popup_calc_end,
+.status {
   display: none;
   position: fixed;
   top: 0;
@@ -694,7 +699,8 @@ textarea:focus {
 }
 .popup_content,
 .popup_engineer_content,
-.popup_calc_end_content {
+.popup_calc_end_content,
+.status_content {
   position: fixed;
   top: 10%;
   left: 50%;
@@ -705,7 +711,8 @@ textarea:focus {
 }
 .popup_close,
 .popup_engineer_close,
-.popup_calc_end_close {
+.popup_calc_end_close,
+.status_close {
   position: absolute;
   top: -2.2rem;
   right: -5rem;

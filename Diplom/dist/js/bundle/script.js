@@ -81,8 +81,8 @@ window.addEventListener('DOMContentLoaded', function () {
 	    closeCalc = document.getElementsByClassName('popup_calc_close');
 
 	function addCalc() {
-		for (var i = 0; i < calcBtn.length; i++) {
-			calcBtn[i].addEventListener('click', function () {
+		for (var _i2 = 0; _i2 < calcBtn.length; _i2++) {
+			calcBtn[_i2].addEventListener('click', function () {
 				modalCalc.style.display = 'flex';
 			});
 			closeCalc[0].addEventListener('click', function () {
@@ -97,10 +97,18 @@ window.addEventListener('DOMContentLoaded', function () {
 			modal.style.display = 'flex';
 			modalprev.style.display = 'none';
 			console.log(info);
+			console.log(JSON.stringify(info));
 		});
-		for (var i = 0; i < closeCalc.length; i++) {
-			closeCalc[i].addEventListener('click', function () {
+		for (var _i3 = 0; _i3 < closeCalc.length; _i3++) {
+			closeCalc[_i3].addEventListener('click', function () {
 				modal.style.display = 'none';
+				info.form = undefined;
+				info.widthInfo = undefined;
+				info.heightInfo = undefined;
+				info.typeInfo = undefined;
+				info.temp = undefined;
+				width.value = '';
+				height.value = '';
 			});
 		}
 	}
@@ -115,12 +123,12 @@ window.addEventListener('DOMContentLoaded', function () {
 	    formWindow = void 0;
 
 	function icons(icon, icBig) {
-		var _loop2 = function _loop2(_i2) {
-			icon[_i2].addEventListener('click', function (e) {
+		var _loop2 = function _loop2(_i4) {
+			icon[_i4].addEventListener('click', function (e) {
 				e.preventDefault();
 				info.form = e.target;
 				for (var _j2 = 0; _j2 < icon.length; _j2++) {
-					if (_j2 == _i2) {
+					if (_j2 == _i4) {
 						icon[_j2].style.width = '114px';
 						icon[_j2].style.height = '67px';
 						icBig[_j2].style.display = 'inline-block';
@@ -133,8 +141,8 @@ window.addEventListener('DOMContentLoaded', function () {
 			});
 		};
 
-		for (var _i2 = 0; _i2 < icon.length; _i2++) {
-			_loop2(_i2);
+		for (var _i4 = 0; _i4 < icon.length; _i4++) {
+			_loop2(_i4);
 		}
 	}
 	icons(iconsMini, iconsBig);
@@ -195,13 +203,79 @@ window.addEventListener('DOMContentLoaded', function () {
 
 		//Forms
 
+	};var message = new Object();
+	message.loading = 'Загрузка...';
+	message.success = 'Спасибо! Скоро мы с вами свяжемся.';
+	message.failure = 'Что то пошло не так...';
 
-		//Timer
+	var form = document.getElementsByClassName('form'),
+	    input = void 0,
+	    statusMessage = document.createElement('div');
+	statusMessage.classList.add('status');
+
+	for (var _i5 = 0; _i5 < form.length; _i5++) {
+		input = form[_i5].getElementsByTagName('input');
+	}
+
+	function sendForm(elem) {
+		elem.addEventListener('submit', function (e) {
+			e.preventDefault();
+			elem.appendChild(statusMessage);
+			var formData = new FormData(elem);
+
+			function postData(data) {
+				return new Promise(function (resolve, reject) {
+					var request = new XMLHttpRequest();
+					request.open('POST', 'server.php');
+					request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+					request.onreadystatechange = function () {
+						if (request.readyState < 4) {
+							resolve();
+						} else if (request.readyState === 4) {
+							if (request.status == 200 && request.status < 300) {
+								resolve();
+							} else {
+								reject();
+							}
+						}
+					};
+					request.send(data);
+				});
+			}
+			postData(formData).then(function () {
+				return statusMessage.style.color = 'black';
+			}).then(function () {
+				return statusMessage.innerHTML = message.loading;
+			}).then(function () {
+				return statusMessage.innerHTML = message.success;
+			}).catch(function () {
+				return statusMessage.innerHTML = message.failure;
+			});
+		});
+	}
+	function clearInput() {
+		for (var _i6 = 0; _i6 < input.length; _i6++) {
+			input[_i6].value = '';
+		}
+	}
+
+	for (var _i7 = 0; _i7 < form.length; _i7++) {
+		sendForm(form[_i7]);
+		clearInput();
+	}
+
+	var phone = document.getElementsByName('user_phone');
+
+	for (var _i8 = 0; _i8 < phone.length; _i8++) {
+		phone[_i8].addEventListener('keyup', function () {
+			this.value = this.value.replace(/[^\d]/, '').substr(0, 11);
+		});
+	}
+
+	//Timer
 
 
-		//ClickPicture
+	//ClickPicture
 
-	};var clickImg = document.getElementsByClassName('zoom');
-
-	console.log(clickImg);
+	var clickImg = document.getElementsByClassName('zoom');
 });
