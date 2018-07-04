@@ -1059,10 +1059,6 @@ textarea:focus {
     margin-bottom: 3rem;
     text-align: center;
   }
-  .sale .timer {
-    margin-bottom: 3rem;
-    text-align: center;
-  }
   .contacts_info {
     margin-top: 3rem;
   }
@@ -1071,6 +1067,24 @@ textarea:focus {
     margin-right: 0;
     margin-bottom: 2rem;
   }
+}
+.timer {
+  margin-bottom: 3rem;
+  text-align: center;
+  padding-top: 27px;
+  width: 80%;
+  height: 120px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  font-style: normal;
+  color: #220425;
+  border: 1px solid black;
+  border-radius: 15px;
+  background-color: #fff;
+}
+.timer-action {
+  font-size: 20px;
 }
 @media (max-width: 767px) {
   .section_header h2 {
