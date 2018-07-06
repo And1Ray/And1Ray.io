@@ -1,0 +1,24 @@
+<<<<<<< HEAD
+body {
+	margin: 0, auto;
+}
+
+.time {
+ padding: 20px;
+ background-color: black;
+ color: white;
+ font-size: 100px;
+ text-align: center;
+=======
+body {
+	margin: 0, auto;
+}
+
+.time {
+ padding: 20px;
+ background-color: black;
+ color: white;
+ font-size: 100px;
+ text-align: center;
+>>>>>>> 93e1c4a8ae7fb6bab2ab4ce87608a0677eef47ab
+}
