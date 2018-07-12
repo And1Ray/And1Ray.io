@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+
+  <body>
+
+    <div class="tabs">
+
+      <ul class="tabs__caption">
+        <li class="active">Мои фотки ВК</li>
+        <li>Игра</li>
+        <li>Не стилизованный аккордеон)))</li>
+      </ul>
+
+      <div class="tabs__content active">
+        <span class="name-slide">Нажми на изображение</span>
+        <div class="galleria">
+          <img src="https://pp.userapi.com/c847220/v847220907/5a6/70qkM-NNHFQ.jpg">
+          <img src="https://sun1-13.userapi.com/c840737/v840737615/1f7e8/biseuskW4Ks.jpg">
+          <img src="https://pp.userapi.com/c836727/v836727243/3d4e4/21NKy2IVUq4.jpg">
+        </div>
+      </div>
+
+      <div class="tabs__content">
+        <div class="init">
+          <div class="center1">
+            <h1>WE NEED YOU!</h1>
+            <p>Click on each square to plant a tree. You must hurry or the factories will colonize us!</p>
+            <p class="floating bold">START GAME</p>
+          </div>
+        </div>
+        <div class="won">
+          <div class="center">
+            <h1>YOU WON!</h1>
+            <p class="floating replay bold">save the World again</p>
+          </div>
+        </div>
+        <div class="init hidden">
+          <h1 class="center">INCREASED VELOCITY!</h1>
+        </div>
+        <!-- <h2 class="counter">Level: 1</h2> -->
+        <div class="container">
+          <div class="game"></div>
+        </div>
+      </div>
+
+      <div class="tabs__content accord">
+        <h4>#Title</h4>
+        <!-- title -->
+        <div>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+          survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+          publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </div>
+        <!-- container hide text -->
+
+        <h4>#Title</h4>
+        <!-- title -->
+        <div>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+          survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+          publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </div>
+        <!-- container hide text -->
+
+        <h4>#Title</h4>
+        <!-- title -->
+        <div>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+          survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+          publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </div>
+        <!-- container hide text -->
+      </div>
+
+    </div>
+
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="galleria/galleria-1.5.7.min.js"></script>
+
+    <script>
+      (function() {
+        Galleria.loadTheme('galleria/themes/classic/galleria.classic.min.js');
+        Galleria.configure({
+          transition: 'flash',
+          imageCrop: true,
+          height: 400,
+          width: 450,
+          autoplay: 4000,
+          lightbox: true
+        });
+        Galleria.run('.galleria');
+      }());
+
+    </script>
+
+    <script src="js/script.js"></script>
+
+  </body>
+
+</html>
